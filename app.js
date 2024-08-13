@@ -47,5 +47,28 @@ app.get('/produto', (req, res)=>{
     res.status(200).json(vetor);
 });
 
+app.delete('/produto/:codigo', (req, res)=>{
+
+    // Extrair o código da url
+    let codigo = req.params.codigo;
+
+    // Localizar a posição do produto no vetor
+    let posicaoVetor = vetor.findIndex(produto => {
+        return produto.codigo == codigo;
+    });
+
+    // Status e remoção
+    if(posicaoVetor == -1){
+        res.status(404);
+    }else{
+        vetor.splice(posicaoVetor,1);
+        res.status(200);
+    }
+    
+    // Evitar loop infinito
+    res.end();
+});
+
+
 // Servidor
 app.listen(8080);
