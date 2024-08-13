@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consumir API</title>
+
+    <script>
+
+        // 1º Opção - Apenas uma requisição
+        // fetch('https://pokeapi.co/api/v2/pokemon/ditto')
+        // .then(requisicao => requisicao.json())
+        // .then(pokemon => console.log(pokemon.name))
+
+        // 2º Opção - Várias requisições NÃO IRÁ FUNCIONAR
+        // for(let i=1; i<=151; i++){
+        //     fetch('https://pokeapi.co/api/v2/pokemon/'+i)
+        //     .then(requisicao => requisicao.json())
+        //     .then(pokemon => console.log(pokemon.name))
+        // }
+
+        // 3º Opção - Várias requisições IRÁ FUNCIONAR
+        //async function obterPokemon(){}
+        let obterPokemon = async(indice) => {
+
+            // URL
+            let url = "https://pokeapi.co/api/v2/pokemon/"+indice;
+
+            // Realizar a requisição
+            let requisicao = await fetch(url);
+
+            // Converter a requisição para JSON
+            let pokemon = await requisicao.json();
+
+            // Exibir o nome
+            console.log(pokemon.name);
+
+        }
+        
+        let lacoRepeticao = async() => {
+            for(let i=1; i<=151; i++){
+                await obterPokemon(i);
+            }
+        }
+
+        lacoRepeticao();
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

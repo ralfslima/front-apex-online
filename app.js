@@ -64,6 +64,31 @@ app.delete('/produto/:codigo', (req, res)=>{
         vetor.splice(posicaoVetor,1);
         res.status(200);
     }
+
+    // Evitar loop infinito
+    res.end();
+});
+
+app.put('/produto/:codigo', (req, res)=>{
+
+    // Extrair o código da url
+    let codigo = req.params.codigo;
+
+    // Localizar a posição do produto no vetor
+    let posicaoVetor = vetor.findIndex(produto => {
+        return produto.codigo == codigo;
+    });
+
+    // Obter o novo produto
+    let novoProduto = req.body;
+
+    // Status e alteração
+    if(posicaoVetor == -1){
+        res.status(404);
+    }else{
+        vetor[posicaoVetor] = novoProduto;
+        res.status(200);
+    }
     
     // Evitar loop infinito
     res.end();
