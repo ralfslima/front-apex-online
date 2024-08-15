@@ -1,0 +1,17 @@
+- Lançado em 2013 pelo Meta (Facebook, Instagram e WhatsApp).
+
+- Arquitetura de componentes.
+
+- JSX (JavaScript XML).
+
+- Até a versão 16.7 haviam duas estruturas:
+    - Funções
+    - Classes (Ciclo de vida ou Lifecycle)
+
+- Na versão 16.8 surgiram os Hooks.
+
+- React é uma biblioteca:
+    - Biblioteca: São pequenas tecnologias para desenvolver sistemas.
+    - Framework: Tecnologias completas para desenvolver sistemas.
+
+- React suporta as linguagens JavaScript e TypeScript.
