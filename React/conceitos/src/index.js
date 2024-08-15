@@ -4,7 +4,9 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 
 // Importar componentes
-import Componente01 from './Componente01';
+//import Componente01 from './Componente01';
+//import Componente02 from './Componente02';
+import Componente03 from './Componente03';
 
 // 1º Render - SEM JSX
 //const elemento = React.createElement('h1', {}, 'Hello World!');
@@ -15,4 +17,4 @@ import Componente01 from './Componente01';
 
 // 3º Render - COM JSX (Render utilizado a partir da versão 18)
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<Componente01/>);
+root.render(<Componente03/>);

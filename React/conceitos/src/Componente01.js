@@ -6,10 +6,10 @@ function Componente01(){
 
     // Retorno
     return(
-        <div>
+        <React.Fragment>
             <h1>Hello World!</h1> 
             <h1>Aprendendo React</h1>
-        </div>
+        </React.Fragment>
     );
 
 }
