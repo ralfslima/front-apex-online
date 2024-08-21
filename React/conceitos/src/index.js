@@ -8,7 +8,9 @@ import ReactDOM from 'react-dom/client';
 //import Componente02 from './Componente02';
 // import Componente03 from './Componente03';
 // import Componente04 from './Componente04';
-import Componente05 from './Componente05';
+// import Componente05 from './Componente05';
+// import Componente06 from './Componente06';
+import Componente07_pai from './Componente07_pai';
 
 // 1º Render - SEM JSX
 //const elemento = React.createElement('h1', {}, 'Hello World!');
@@ -19,4 +21,4 @@ import Componente05 from './Componente05';
 
 // 3º Render - COM JSX (Render utilizado a partir da versão 18)
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<Componente05/>);
+root.render(<Componente07_pai/>);
