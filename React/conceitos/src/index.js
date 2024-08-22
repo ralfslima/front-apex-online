@@ -13,7 +13,8 @@ import ReactDOM from 'react-dom/client';
 // import Componente07_pai from './Componente07_pai';
 // import Componente08 from './Componente08';
 // import Exercicio01 from './Exercicio01';
-import Exercicio02 from './Exercicio02';
+// import Exercicio02 from './Exercicio02';
+import Exercicio03 from './Exercicio03';
 
 // 1º Render - SEM JSX
 //const elemento = React.createElement('h1', {}, 'Hello World!');
@@ -24,4 +25,4 @@ import Exercicio02 from './Exercicio02';
 
 // 3º Render - COM JSX (Render utilizado a partir da versão 18)
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<Exercicio02/>);
+root.render(<Exercicio03/>);
