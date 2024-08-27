@@ -15,3 +15,5 @@
     - Framework: Tecnologias completas para desenvolver sistemas.
 
 - React suporta as linguagens JavaScript e TypeScript.
+
+- SPA (Single Page Application).
