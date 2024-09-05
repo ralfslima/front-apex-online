@@ -1,22 +1,10 @@
 {
   "pessoas": [
     {
-      "nome": "Alice",
-      "idade": 23,
-      "cidade": "Joinville",
+      "nome": "Aline",
+      "idade": "19",
+      "cidade": "Rio de Janeiro",
       "id": 1
-    },
-    {
-      "nome": "Bernardo",
-      "idade": 33,
-      "cidade": "Curitiba",
-      "id": 2
-    },
-    {
-      "nome": "Cristiane",
-      "idade": 25,
-      "cidade": "São Paulo",
-      "id": 3
     },
     {
       "nome": "Luciano",
@@ -29,6 +17,36 @@
       "idade": 22,
       "cidade": "São Paulo",
       "id": 5
+    },
+    {
+      "nome": "Paula",
+      "idade": "39",
+      "cidade": "Gaspar",
+      "id": 6
+    },
+    {
+      "nome": "Guilherme",
+      "idade": "23",
+      "cidade": "São José",
+      "id": 7
+    },
+    {
+      "nome": "Fernanda",
+      "idade": "39",
+      "cidade": "Ribeirão Preto",
+      "id": 8
+    },
+    {
+      "nome": "Suellen",
+      "idade": "33",
+      "cidade": "Joinville",
+      "id": 10
+    },
+    {
+      "nome": "Juliana",
+      "idade": "22",
+      "cidade": "Curitiba",
+      "id": 11
     }
   ]
 }
