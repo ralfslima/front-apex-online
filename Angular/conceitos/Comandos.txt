@@ -1,0 +1,4 @@
+- ng serve
+- ng s
+- ng serve --open
+- ng s --o
