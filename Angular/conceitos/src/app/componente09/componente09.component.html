@@ -1,0 +1,12 @@
+<!-- Exibir o nome digitado -->
+<input type="text" [(ngModel)]="nome" placeholder="Informe um nome" >
+<p>{{nome}}</p>
+
+<!-- Utilizando o formulário -->
+<form>
+    <input type="text" name="estado" [(ngModel)]="estado" placeholder="Informe um estado" >
+    <input type="text" name="cidade" [(ngModel)]="cidade" placeholder="Informe uma cidade" >
+</form>
+
+<p>Estado: {{estado}}</p>
+<p>Cidade: {{cidade}}</p>

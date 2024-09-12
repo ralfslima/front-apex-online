@@ -1,0 +1,40 @@
+@if(pessoa.get('nome')?.hasError('required') && pessoa.get('nome')?.touched){
+    <p>O nome deve ser preenchido!</p>
+}
+
+@if(pessoa.get('nome')?.hasError('minlength') && pessoa.get('nome')?.touched){
+    <p>O nome deve ter pelo menos 3 caracteres!</p>
+}
+
+@if(pessoa.get('idade')?.hasError('required') && pessoa.get('idade')?.touched){
+    <p>A idade deve ser preenchida!</p>
+}
+
+@if(pessoa.get('idade')?.hasError('min') && pessoa.get('idade')?.touched){
+    <p>A idade não pode ser negativa!</p>
+}
+
+@if(pessoa.get('idade')?.hasError('max') && pessoa.get('idade')?.touched){
+    <p>A idade não pode ser maior que 100!</p>
+}
+
+@if(pessoa.valid){
+    <p>Formulário preenchido corretamente!</p>
+}
+
+
+<form [formGroup]="pessoa">
+    <input type="text" formControlName="nome"  placeholder="Nome">
+    <input type="text" formControlName="idade" placeholder="Idade">
+    <input type="button" value="Cadastrar" [disabled]="!pessoa.valid">
+</form>
+
+<h1>Validação do formulário: {{pessoa.valid}}</h1>
+
+<h1>Nome: {{pessoa.value.nome}}</h1>
+<h1>Idade: {{pessoa.value.idade}}</h1>
+
+<hr>
+
+<!-- Pipe = Modificador/Tradutor/Transformador -->
+<h1>{{pessoa.value | json}}</h1>

@@ -1,0 +1,11 @@
+<!-- Diretiva -->
+<ul>
+    <li *ngFor="let n of nomes; index as i">{{i}} - {{n}}</li>
+</ul>
+
+<!-- Control Flow -->
+@for(n of nomes; track $index){
+    <p>{{$index}} - {{n}}</p>
+}@empty{
+    <p>O vetor está vazio...</p>
+}

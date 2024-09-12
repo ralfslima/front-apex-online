@@ -1,0 +1,17 @@
+<h1 *ngIf="texto">Texto via diretiva</h1>
+
+@if(texto){
+    <h1>Texto via Control Flow</h1>
+}@else{
+    <h1>Texto oculto via Control Flow</h1>
+}
+
+<hr />
+
+@if(media >= 7){
+    <p>Aprovado com média {{media}}</p>
+}@else if (media >= 5){
+    <p>Em exame com média {{media}}</p>
+}@else{
+    <p>Reprovado com média {{media}}</p>
+}

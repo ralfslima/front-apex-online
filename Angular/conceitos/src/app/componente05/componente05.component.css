@@ -1,0 +1,15 @@
+.aprovado{
+    color: green;
+    border: solid 1px #999;
+    background-color: #e8e8e8;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.reprovado{
+    color: red;
+    border: solid 1px #999;
+    background-color: #e8e8e8;
+    padding: 10px;
+    border-radius: 5px;
+}

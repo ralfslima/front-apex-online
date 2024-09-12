@@ -1,0 +1,15 @@
+<!-- Diretiva -->
+<div [ngSwitch]="cidade">
+    <p *ngSwitchCase="'Blumenau'">Cidade onde ocorre a Oktoberfest</p>
+    <p *ngSwitchCase="'Florianópolis'">Capital de Santa Catarina</p>
+    <p *ngSwitchCase="'Joinville'">Maior cidade do estado</p>
+    <p *ngSwitchDefault>Cidade desconhecida...</p>
+</div>
+
+<!-- Control Flow -->
+@switch (cidade) {
+    @case ('Blumenau') {<p>Cidade onde ocorre a Oktoberfest</p>}
+    @case ('Florianópolis') {<p>Capital de Santa Catarina</p>}
+    @case ('Joinville') {<p>Maior cidade do estado</p>}
+    @default {<p>Cidade desconhecida...</p>}
+}

@@ -1,0 +1,9 @@
+<ul>
+    <li *ngFor="let a of alunos" [ngStyle]="{'backgroundColor': a == 'aprovado' ? 'green' : 'red'}">{{a}}</li>
+</ul>
+
+<hr/>
+
+<ul>
+    <li *ngFor="let a of alunos" [ngClass]="a == 'aprovado' ? 'aprovado' : 'reprovado'">{{a}}</li>
+</ul>
