@@ -1,0 +1,44 @@
+<!-- Formulário -->
+<form [formGroup]="formulario">
+    <input type="text"   formControlName="nome"   placeholder="Nome"   class="form-control">
+    <input type="text"   formControlName="idade"  placeholder="Idade"  class="form-control">
+    <input type="text"   formControlName="cidade" placeholder="Cidade" class="form-control">
+    
+    @if(btnCadastrar){
+        <input type="button" (click)="cadastrar()" value="Cadastrar"        class="btn btn-primary">
+    }@else {   
+        <input type="button" (click)="alterar()"  value="Alterar"  class="btn btn-primary">
+        <input type="button" (click)="remover()"  value="Remover"  class="btn btn-primary">
+        <input type="button" (click)="cancelar()" value="Cancelar" class="btn btn-primary">
+    }
+
+</form>
+
+<!-- Tabela -->
+<table class="table">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Nome</th>
+            <th>Idade</th>
+            <th>Cidade</th>
+            <th>Selecionar</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @for(v of vetor; track $index){
+            <tr>
+                <td>{{$index + 1}}</td>
+                <td>{{v.nome}}</td>
+                <td>{{v.idade}}</td>
+                <td>{{v.cidade}}</td>
+                <td><button class="btn btn-success" (click)="selecionar($index)">Selecionar</button></td>
+            </tr>
+        }@empty {
+            <tr>
+                <td colspan="5">Nenhum registro encontrado.</td>
+            </tr>
+        }
+    </tbody>
+</table>
