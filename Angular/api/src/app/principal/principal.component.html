@@ -1,0 +1,8 @@
+<p>Exibir id a partir de:</p>
+<input type="number" [(ngModel)]="numero" (keyup)="exibirId()">
+
+<ul>
+    @for(v of vetor; track $index){
+        <li>{{v.id}} - {{v.title}}</li>
+    }
+</ul>
