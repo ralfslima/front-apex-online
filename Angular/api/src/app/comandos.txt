@@ -1,0 +1,9 @@
+1º Criei um projeto: ng new api
+
+2º Criei um componente: ng g c principal
+
+3º Criação de um serviço: ng g s servicos/postagens
+
+4º Criar um modelo: sem comando.
+
+5º Importar o provideHttp no arquivo app.config: provideHttpClient(withFetch())

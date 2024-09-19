@@ -1,5 +1,6 @@
-<p>Exibir id a partir de:</p>
-<input type="number" [(ngModel)]="numero" (keyup)="exibirId()">
+@if(carregando){
+    <p>Carregando lista de postagens</p>
+}
 
 <ul>
     @for(v of vetor; track $index){

@@ -2,12 +2,11 @@ import { Component } from '@angular/core';
 import { PostagensService } from '../servicos/postagens.service';
 import { Postagem } from '../modelos/Postagem';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-principal',
   standalone: true,
-  imports: [CommonModule, FormsModule],
+  imports: [CommonModule],
   templateUrl: './principal.component.html',
   styleUrl: './principal.component.css'
 })
@@ -15,12 +14,12 @@ export class PrincipalComponent {
 
   // Vetor de postagens
   vetor:Postagem[] = [];
+
+  // Status de carregamento
+  carregando:boolean = true;
   
   // Construtor
   constructor(private servico:PostagensService){}
-
-  // Variável número
-  numero:number;
 
   // Executa alguma ação, após a criação do componente
   ngOnInit(){
@@ -30,16 +29,11 @@ export class PrincipalComponent {
   // Função para obter todas as postagens
   selecionar():void{
     this.servico.obterPostagens()
-    .subscribe(obj => this.vetor = obj);
+    .subscribe(obj => {
+      this.vetor = obj;
+      this.carregando = false;
+    });
   }
 
-  // Exibir o id a partir de um valor específico
-  exibirId():void{
-    if(this.numero == null){
-      this.selecionar()
-    }else{
-      this.vetor = this.vetor.filter(obj => {return obj.id >= this.numero});
-    }
-  }
 
 }
