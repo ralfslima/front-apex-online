@@ -7,3 +7,9 @@
 4º Criar um modelo: sem comando.
 
 5º Importar o provideHttp no arquivo app.config: provideHttpClient(withFetch())
+
+
+*ATIVIDADE*
+
+Utilizando o site ViaCep (https://viacep.com.br), desenvolva um sistema para retornar o endereço
+do cliente. Será pedido o CEP, em seguida retornado o endereço.
