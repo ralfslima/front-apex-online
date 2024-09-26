@@ -1,0 +1,54 @@
+<!-- Formulário -->
+<form class="formulario" [formGroup]="formulario">
+
+    <!-- Campo de texto -->
+    <mat-form-field class="campo">
+      <mat-label>Nome do produto</mat-label>
+      <input matInput formControlName="nome">
+    </mat-form-field>
+  
+    <!-- Campo de texto -->
+    <mat-form-field class="campo">
+        <mat-label>Valor do produto</mat-label>
+        <input matInput formControlName="valor">
+    </mat-form-field>
+
+    <!-- Botão de cadastro -->
+    <button mat-flat-button (click)="cadastrar()">Cadastrar</button>
+</form>
+  
+<!-- <h1>{{formulario.value | json}}</h1> -->
+<!-- <h1>{{vetor | json}}</h1> -->
+
+<!-- Tabela -->
+<table mat-table [dataSource]="dataSource">
+
+    <!-- Código do produto -->
+    <ng-container matColumnDef="codigo">
+      <th mat-header-cell *matHeaderCellDef> Código </th>
+      <td mat-cell *matCellDef="let produto"> {{produto.codigo}} </td>
+    </ng-container>
+
+    <!-- Nome do produto -->
+    <ng-container matColumnDef="nome">
+        <th mat-header-cell *matHeaderCellDef> Nome </th>
+        <td mat-cell *matCellDef="let produto"> {{produto.nome}} </td>
+      </ng-container>
+
+    <!-- Valor do produto -->
+    <ng-container matColumnDef="valor">
+        <th mat-header-cell *matHeaderCellDef> Valor </th>
+        <td mat-cell *matCellDef="let produto"> {{produto.valor}} </td>
+      </ng-container>
+
+      <!-- Botão para remover -->
+      <ng-container matColumnDef="remover">
+          <th mat-header-cell *matHeaderCellDef> Remover </th>
+          <td mat-cell *matCellDef="let produto"> <button mat-flat-button (click)="remover(produto.codigo)">Remover</button> </td>
+        </ng-container>
+      
+    <!-- Configuração do cabeçalho  -->
+    <tr mat-header-row *matHeaderRowDef="cabecalho"></tr>
+    <tr mat-row *matRowDef="let row; columns: cabecalho;"></tr>
+  </table>
+  

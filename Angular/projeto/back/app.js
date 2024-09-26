@@ -1,8 +1,14 @@
 // Importar o Express
 const express = require('express');
 
+// Importar CORS
+const cors = require('cors');
+
 // Criar o APP (responsável pelo gerenciamento de rotas)
 const app = express();
+
+// Referenciar o CORS no APP
+app.use(cors());
 
 // Formato de dados (JSON)
 app.use(express.json());
